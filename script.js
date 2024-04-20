@@ -45,10 +45,10 @@ fetch('personality_questions.txt')
             currentIndex++;
             if (currentIndex < questions.length) {
                 displayQuestion(currentIndex, questions);
+                document.getElementById('next-btn').addEventListener('click', nextQuestion);
             } else {
                 // End of quiz, display the user's responses
                 document.getElementById('response').innerText = 'User Responses: ' + userResponses;
             }
         }
-        document.getElementById('next-btn').addEventListener('click', nextQuestion);
     });
