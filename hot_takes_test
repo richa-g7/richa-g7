@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yes/No Questions</title>
+</head>
+<body>
+<h1>Yes/No Questions</h1>
+<p>Answer the following questions:</p>
+<form id="yesNoForm">
+  <label for="q1">Question 1: Do you like ice cream?</label>
+  <select id="q1">
+    <option value="yes">Yes</option>
+    <option value="no">No</option>
+  </select><br><br>
+  
+  <label for="q2">Question 2: Is the sky blue?</label>
+  <select id="q2">
+    <option value="yes">Yes</option>
+    <option value="no">No</option>
+  </select><br><br>
+
+  <label for="q3">Question 3: Have you ever been to Paris?</label>
+  <select id="q3">
+    <option value="yes">Yes</option>
+    <option value="no">No</option>
+  </select><br><br>
+
+  <button type="button" onclick="calculateYes()">Calculate Yeses</button>
+</form>
+
+<p>Total Yeses: <span id="totalYes">0</span></p>
+
+<script>
+function calculateYes() {
+  var q1 = document.getElementById("q1").value;
+  var q2 = document.getElementById("q2").value;
+  var q3 = document.getElementById("q3").value;
+
+  var totalYes = 0;
+  if (q1 === "yes") totalYes++;
+  if (q2 === "yes") totalYes++;
+  if (q3 === "yes") totalYes++;
+
+  document.getElementById("totalYes").textContent = totalYes;
+}
+</script>
+
+</body>
+</html>
