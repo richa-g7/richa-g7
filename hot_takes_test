@@ -108,11 +108,16 @@
                 }
                 answers += selectedValue;
             }
+
+           if (answers.length !== 10) {
+                alert("Please answer all questions before submitting.");
+                return;
+           }
+      
             localStorage.setItem("Hot take answers", answers); // Save answers to localStorage
             window.location.href = "index.html";
         }
     </script>
-
 
 </body>
 </html>
