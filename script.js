@@ -1,5 +1,5 @@
 // Fetch questions from the text file
-fetch('questions.txt')
+fetch('personality_questions.txt')
     .then(response => response.text())
     .then(data => {
         // Split the data into an array of lines
@@ -14,7 +14,7 @@ fetch('questions.txt')
         function displayQuestion(index, questions) {
             const questionContainer = document.getElementById('question-container');
             questionContainer.innerHTML = `
-                <p> Choose from 1:Disagree to 5:Agree
+                <p> Choose from 1 - Disagree to 5 - Agree
                 <p>${questions[index]}</p>
                 <label><input type="radio" name="option" value="1"> 1</label>
                 <label><input type="radio" name="option" value="2"> 2</label>
