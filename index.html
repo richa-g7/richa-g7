@@ -42,7 +42,7 @@
         
     </div>
     <br>
-    <button type="button" onclick="submitForm()"> Submit </button>
+    <button type="button" id="b1" onclick="submitForm()"> Submit </button>
 </form>
 
     <div class="feature">
@@ -71,7 +71,7 @@
     <option value="Pisces">Pisces</option>
   </select>
             
-    <button type="button" onclick="zodiac_submitForm()"> Submit </button>
+    <button type="button" id="b2" onclick="zodiac_submitForm()"> Submit </button>
     <br><br>
 
     </form>
@@ -144,15 +144,15 @@
 
 
     function zodiac_submitForm() {
-            let answers = document.getElementbyId("q1").value;
+            let answers2 = document.getElementbyId("q1").value;
             
             
-           // if (answers.length < 1) {
+           // if (answers2.length < 1) {
                 alert("Please answer all questions before submitting.");
                 // return;
            // }
       
-            localStorage.setItem("zodiac answers", answers); // Save answers to localStorage
+            localStorage.setItem("zodiac answers", answers2); // Save answers to localStorage
             window.location.href = "index.html";
         }
     </script>
