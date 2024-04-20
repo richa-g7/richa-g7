@@ -94,21 +94,7 @@
          <button type="button" onclick="submitForm()">Submit</button>
 </form>
 
-<p>Total Yeses: <span id="totalYes">0</span></p>
-
 <script>
-// function calculateYes() {
-//   var q1 = document.getElementById("q1").value;
-//   var q2 = document.getElementById("q2").value;
-//   var q3 = document.getElementById("q3").value;
-
-//   var totalYes = 0;
-//   if (q1 === "yes") totalYes++;
-//   if (q2 === "yes") totalYes++;
-//   if (q3 === "yes") totalYes++;
-
-//   document.getElementById("totalYes").textContent = totalYes;
-
         function submitForm() {
             let answers = "";
             for (let i = 1; i <= 10; i++) {
