@@ -41,7 +41,7 @@
         </div>
         
     </div>
-<br>
+    <br>
     <button type="button" onclick="submitForm()"> Submit </button>
 </form>
 
@@ -52,8 +52,10 @@
 
   <label for="q1"> What is your zodiac sign? </label>
   <select id="q1" name="a3">
-<!--     <option selected="true" style='display: none'></option>  -->
-       <option hidden> -- please select -- </option>
+
+      <!-- <option selected="true" style='display: none'></option>  -->
+    
+    <option hidden> -- please select -- </option>
 
     <option value="Aries" >Aries</option>
     <option value="Taurus">Taurus</option>
@@ -68,13 +70,11 @@
     <option value="Aquarius">Aquarius</option>
     <option value="Pisces">Pisces</option>
   </select>
-
-            &emsp
             
     <button type="button" onclick="zodiac_submitForm()"> Submit </button>
-            <br><br>
+    <br><br>
 
-            </form>
+    </form>
     </div>
 
     <div class="feature">
@@ -147,10 +147,10 @@
             let answers = document.getElementbyId("q1").value;
             
             
-           if (answers.length < 1) {
+           // if (answers.length < 1) {
                 alert("Please answer all questions before submitting.");
-                return;
-           }
+                // return;
+           // }
       
             localStorage.setItem("zodiac answers", answers); // Save answers to localStorage
             window.location.href = "index.html";
