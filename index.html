@@ -36,10 +36,27 @@
 
     <div class="feature">
         <h2>Zodiac Compatibility</h2>
-        <p>Enter your zodiac sign:</p>
-        <input type="text" id="zodiac-sign" placeholder="Enter your zodiac sign...">
-        <button onclick="checkZodiacCompatibility()">Check Compatibility</button>
-        <p id="zodiac-compatibility"></p>
+       <form id="ZodiacForm">
+  <label for="q1"> What is your zodiac sign? </label>
+  <select id="q1">
+<!--      <option selected="true" style='display: none'></option>  -->
+       <option hidden> --please select-- </option>
+
+    <option value="Aries" >Aries</option>
+    <option value="Taurus">Taurus</option>
+    <option value="Gemini">Gemini</option>
+    <option value="Cancer">Cancer</option>
+    <option value="Leo">Leo</option>
+    <option value="Virgo">Virgo</option>
+    <option value="Libra">Libra</option>
+    <option value="Scorpius">Scorpius</option>
+    <option value="Sagittarius">Sagittarius</option>
+    <option value="Capricornus">Capricornus</option>
+    <option value="Aquarius">Aquarius</option>
+    <option value="Pisces">Pisces</option>
+  </select><br><br>
+
+</form>
     </div>
 
     <div class="feature">
