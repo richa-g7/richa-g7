@@ -16,6 +16,7 @@ fetch('personality_questions.txt')
             questionContainer.innerHTML = `
                 <p> Choose from 1 - Disagree to 5 - Agree
                 <p>${questions[index]}</p>
+                <p>${index}</p>
                 <label><input type="radio" name="option" value="1"> 1</label>
                 <label><input type="radio" name="option" value="2"> 2</label>
                 <label><input type="radio" name="option" value="3"> 3</label>
