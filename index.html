@@ -102,6 +102,7 @@
 <script>
         function submitForm() {
             let answers = "";
+            
             let radioBtns = document.getElementsByName("a1");
             for (let j = 0; j < radioBtns.length; j++) {
                 if (radioBtns[j].checked) {
@@ -110,10 +111,10 @@
                 }
             }
 
-            let radioBtns = document.getElementsByName("a2");
-            for (let j = 0; j < radioBtns.length; j++) {
-                if (radioBtns[j].checked) {
-                    answers += radioBtns[j].value;
+            let radioBtns2 = document.getElementsByName("a2");
+            for (let j = 0; j < radioBtns2.length; j++) {
+                if (radioBtns2[j].checked) {
+                    answers += radioBtns2[j].value;
                     break;
                 }
             }
