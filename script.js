@@ -4,6 +4,7 @@ fetch('personality_questions.txt')
     .then(data => {
         // Split the data into an array of lines
         const questions = data.trim().split('\n');
+        print(questions);
         let currentIndex = 0;
         let userResponses = '';
 
