@@ -4,7 +4,6 @@ fetch('personality_questions.txt')
     .then(data => {
         // Split the data into an array of lines
         const questions = data.trim().split('\n');
-        print(questions);
         let currentIndex = 0;
         let userResponses = '';
 
@@ -47,10 +46,10 @@ fetch('personality_questions.txt')
                 displayQuestion(currentIndex, questions);
             } else {
                 // End of quiz, display the user's responses
-                document.getElementById('response').innerText = 'User Responses: ' + userResponses;
+                // document.getElementById('response').innerText = 'User Responses: ' + userResponses;
+                localStorage.setItem("personality_result", userResponses);
+                window.location.href = "index.html";
             }
         }
-        if(currentIndex < questions.length){
-            document.getElementById('next-btn').addEventListener('click', nextQuestion);
-        }
+        document.getElementById('next-btn').addEventListener('click', nextQuestion);
     });
