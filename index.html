@@ -6,15 +6,19 @@
     <title>Dating Compatibility Tests</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+    
 <body>
 
+    <form>
 <div class="container">
     <h1>Welcome to Dating Compatibility Tests!</h1>
     <p>Find out your compatibility with others through various tests.</p>
 
     <div class="feature">
+        
         <h2>Gender & Sexuality</h2>
         <p>Pick your gender:</p>
+        
         <div class="gender">
             <input type="radio" id="male" name="gender" value="male">
             <label for="male">Male</label><br>
@@ -23,7 +27,9 @@
             <input type="radio" id="nonbinary" name="gender" value="nonbinary">
             <label for="nonbinary">Non-binary</label><br>
         </div>
+        
         <p>Choose genders you are attracted to:</p>
+        
         <div class="sexuality">
             <input type="checkbox" id="attracted-to-male" name="attracted-to" value="male">
             <label for="attracted-to-male">Men</label><br>
@@ -32,6 +38,7 @@
             <input type="checkbox" id="attracted-to-nonbinary" name="attracted-to" value="nonbinary">
             <label for="attracted-to-nonbinary">Non-binary</label><br>
         </div>
+        
     </div>
 
     <div class="feature">
@@ -39,7 +46,7 @@
        <form id="ZodiacForm">
   <label for="q1"> What is your zodiac sign? </label>
   <select id="q1">
-<!--      <option selected="true" style='display: none'></option>  -->
+<!--     <option selected="true" style='display: none'></option>  -->
        <option hidden> -- please select -- </option>
 
     <option value="Aries" >Aries</option>
@@ -80,6 +87,129 @@
 </div>
 
 <script src="scripts.js"></script>
-
+<button type="button" onclick="submitForm()">Submit</button>
+</form>
+    
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+<form>
+        <p>Airsip or waterfall?</p>
+        <div class="airsip-waterfall">
+            <input type="radio" id="airsip" name="q1" value="Y">
+            <label for="airsip">Airsip</label>
+                &emsp;
+            <input type="radio" id="waterfall" name="q1" value="N">
+            <label for="waterfall">Waterfall</label>
+        </div>
+
+        <p>Pineapple on Pizza?</p>
+        <div class="Pineapple on Pizza">
+            <input type="radio" id="Yes" name="q2" value="Y">
+            <label for="YeePine">Hell yeah!</label>
+                &emsp;
+            <input type="radio" id="No" name="q2" value="N">
+            <label for="NayPine">Absolutely Not!</label>
+        </div>
+
+        <p>Sitting acrross or next to someone?</p>
+        <div class="Across or next to">
+            <input type="radio" id="Across" name="q3" value="Y">
+            <label for="Across">Across, I want to see you</label>
+                &emsp;
+            <input type="radio" id="Next" name="q3" value="N">
+            <label for="Next to">Next to, we are closer</label>
+        </div>
+
+        <p>Love at first sight?</p>
+        <div class="First Sight?">
+            <input type="radio" id="Yes" name="q4" value="Y">
+            <label for="Yes">Yes, I'm a real yearner</label>
+                &emsp;
+            <input type="radio" id="No" name="q4" value="N">
+            <label for="No">No! I have trust issues with my eyes!</label>
+        </div>
+
+        <p>Can you have a best friend of the opposite sex?</p>
+        <div class="Friends">
+            <input type="radio" id="Yes" name="q5" value="Y">
+            <label for="Yes">Yes, why not?</label>
+                &emsp;
+            <input type="radio" id="No" name="q5" value="N">
+            <label for="No">No! That should be me!</label>
+        </div>
+
+        <p>Should toilet paper be over or under?</p>
+        <div class="TP">
+            <input type="radio" id="Over" name="q6" value="Y">
+            <label for="Over">Over, no chaos</label>
+                &emsp;
+            <input type="radio" id="Under" name="q6" value="N">
+            <label for="Under">Under, for that surprise factor</label>
+        </div>
+
+        <p>Handwritten note or gift?</p>
+        <div class="LoveLang">
+            <input type="radio" id="Note" name="q7" value="Y">
+            <label for="Note">Note, you can't buy a note</label>
+                &emsp;
+            <input type="radio" id="Gift" name="q7" value="N">
+            <label for="Gift">Gift, love letters are kinda cringe </label>
+        </div>
+
+        <p>Cats or Dogs?</p>
+        <div class="Pets">
+            <input type="radio" id="Cats" name="q8" value="Y">
+            <label for="Cats">Meooooow</label>
+                &emsp;
+            <input type="radio" id="Dogs" name="q8" value="N">
+            <label for="Dogs">WOOF!! </label>
+        </div>
+
+        <p>Gif or Gif?</p>
+        <div class="Pets">
+            <input type="radio" id="Gif" name="q9" value="Y">
+            <label for="Gif">Gif, duh</label>
+                &emsp;
+            <input type="radio" id="Jif" name="q9" value="N">
+            <label for="Jif">Gif, obviously</label>
+        </div>
+
+<!--   <button type="button" onclick="calculateYes()">Calculate Yeses</button> -->
+         <button type="button" onclick="submitForm()">Submit</button>
+</form>
+
+<script>
+        function submitForm() {
+            let answers = "";
+            for (let i = 1; i <= 10; i++) {
+                let radioBtns = document.getElementsByName("q" + i);
+                let selectedValue = "";
+                for (let j = 0; j < radioBtns.length; j++) {
+                    if (radioBtns[j].checked) {
+                        selectedValue = radioBtns[j].value;
+                        break;
+                    }
+                }
+                answers += selectedValue;
+            }
+
+           if (answers.length < 9) {
+                alert("Please answer all questions before submitting.");
+                return;
+           }
+      
+            localStorage.setItem("Hot take answers", answers); // Save answers to localStorage
+            window.location.href = "index.html";
+        }
+    </script>
