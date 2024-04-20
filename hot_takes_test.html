@@ -122,7 +122,8 @@
                 }
                 answers += selectedValue;
             }
-            document.getElementById("result").innerText = "Your answers: " + answers;
+            localStorage.setItem("Hot take answers", answers); // Save answers to localStorage
+            window.location.href = "index.html";
         }
     </script>
 
