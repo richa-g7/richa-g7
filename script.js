@@ -50,4 +50,5 @@ fetch('personality_questions.txt')
                 document.getElementById('response').innerText = 'User Responses: ' + userResponses;
             }
         }
+        document.getElementById('next-btn').addEventListener('click', nextQuestion);
     });
