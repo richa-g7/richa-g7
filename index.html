@@ -41,12 +41,14 @@
         </div>
         
     </div>
-
+<br>
     <button type="button" onclick="submitForm()"> Submit </button>
 </form>
 
     <div class="feature">
+        
         <h2>Zodiac Compatibility</h2>
+        <form>
 
   <label for="q1"> What is your zodiac sign? </label>
   <select id="q1" name="a3">
@@ -65,8 +67,14 @@
     <option value="Capricornus">Capricornus</option>
     <option value="Aquarius">Aquarius</option>
     <option value="Pisces">Pisces</option>
-  </select><br><br>
+  </select>
 
+            &emsp
+            
+    <button type="button" onclick="zodiac_submitForm()"> Submit </button>
+            <br><br>
+
+            </form>
     </div>
 
     <div class="feature">
@@ -130,6 +138,21 @@
            }
       
             localStorage.setItem("Index answers", answers); // Save answers to localStorage
+            window.location.href = "index.html";
+        }
+
+
+
+    function zodiac_submitForm() {
+            let answers = document.getElementbyId("q1").value;
+            
+            
+           if (answers.length < 1) {
+                alert("Please answer all questions before submitting.");
+                return;
+           }
+      
+            localStorage.setItem("zodiac answers", answers); // Save answers to localStorage
             window.location.href = "index.html";
         }
     </script>
