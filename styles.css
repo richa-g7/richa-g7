@@ -41,6 +41,11 @@ a {
     border-radius: 5px;
     cursor: pointer;
     font-family: 'Indie Flower', cursive; /* Use Indie Flower font for buttons */
+     text-decoration: none;
+     transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Add transition effect */
+    -webkit-appearance: none; /* Remove default styling for webkit browsers */
+    -moz-appearance: none; /* Remove default styling for firefox */
+    appearance: none; /* Remove default styling for other browsers */
 }
 
 .button:hover {
