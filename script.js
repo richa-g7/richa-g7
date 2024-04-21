@@ -138,6 +138,17 @@ fetch('personality_questions.txt')
                     
                     
                 document.getElementById('yesCount').textContent = score;
+                if(sessionStorage.getItem("tests_taken") == null) {
+                    sessionStorage.setItem("tests_taken", 1);
+                    sessionStorage.setItem("score", score);
+                } else {
+                    var new_score = sessionStorage.getItem("score")*sessionStorage.getItem("tests_taken") + score;
+                    sessionStorage.setItem("tests_taken", sessionStorage.getItem("tests_taken") + 1 );
+                    sessionStorage.setItem("score", Math.trun(new_score / sessionStorage.getItem("tests_taken")) );
+
+            
+                }
+                sessionStorage.setItem("tests_taken", 
 
 
                 var button = document.getElementById("next-btn");
