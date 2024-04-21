@@ -43,7 +43,7 @@ fetch('personality_questions.txt')
 
             // Proceed to the next question or end the quiz
             // currentIndex++;
-            if (currentIndex < questions.length) {
+            if (currentIndex < questions.length-1) {
                 currentIndex++;
                 displayQuestion(currentIndex, questions);
                 
