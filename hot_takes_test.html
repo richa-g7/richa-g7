@@ -235,6 +235,19 @@
 sharedCount = Math.trunc(sharedCount/9 * 100);
                 
         document.getElementById('yesCount').textContent = sharedCount;
+
+        if(sessionStorage.getItem("tests_taken") == null) {
+                    sessionStorage.setItem("tests_taken", 1);
+                    sessionStorage.setItem("score", score);
+        } else {
+                var score = sharedCount;    
+                var tt = parseInt(sessionStorage.getItem("tests_taken"));
+                    var s = parseInt(sessionStorage.getItem("score"));                      
+                    var new_score = Math.trunc( (s*tt + score) / (tt+1) );
+                      tt += 1;           
+                    sessionStorage.setItem("tests_taken", tt );
+                    sessionStorage.setItem("score", new_score );
+                }
             // sessionStorage.setItem("Hot take answers", answers); // Save answers to localStorage
            
         }
