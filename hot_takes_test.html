@@ -108,12 +108,12 @@
                 }
                 answers += selectedValue;
             }
-
+                write(answers);
            if (answers.length < 9) {
                 alert("Please answer all questions before submitting.");
                 return;
            }
-      
+            
             sessionStorage.setItem("Hot take answers", answers); // Save answers to localStorage
             window.location.href = "index.html";
         }
