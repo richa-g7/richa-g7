@@ -76,7 +76,7 @@
   rl.on('line', (line) => {
     if(linecount == p1){
             const lineArray = line.split(' ');
-             document.getElementById("yesCount").value = lineArray[p2];
+             document.getElementById("yesCount").innerHTML = lineArray[p2];
     }
     const lineArray = line.split(' ');
     console.log("Array of words from line:", lineArray);
