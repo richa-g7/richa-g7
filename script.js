@@ -147,13 +147,15 @@ fetch('personality_questions.txt')
             
         }
 
-       // function return () {
-            //var button2 = document.getElementbyId('rtn-btn");
-            //button.style.visibility = "visible";
-         //   window.location.href = "index.html";
+
+
+        function return() {
+            var button2 = document.getElementbyId('rtn-btn");
+            button.style.visibility = "visible";
+            window.location.href = "index.html";
             
 
 
-        // }
+         }
         document.getElementById('next-btn').addEventListener('click', nextQuestion);
     });
