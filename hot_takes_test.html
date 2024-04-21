@@ -230,7 +230,7 @@
             sharedCount++;
         }
     }
-sharedCount = sharedCount/9 * 100;
+sharedCount = Math.trunc(sharedCount/9 * 100);
                 
         document.getElementById('yesCount').textContent = sharedCount;
             // sessionStorage.setItem("Hot take answers", answers); // Save answers to localStorage
