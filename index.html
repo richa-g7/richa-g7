@@ -64,9 +64,11 @@
 
     <div class="feature">
         <h2>Compatability Score: <span id="cscore">Take a test!</span></h2>
+        <script>
         if(sessionStorage.getItem("tests_taken") != null) {
             document.getElementById('cscore').textContent = sessionStorage.getItem("score");
         }
+            </script>
         
 
 
