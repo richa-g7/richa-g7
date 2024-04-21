@@ -131,25 +131,15 @@ fetch('personality_questions.txt')
                     }
                 }
 
-                    //score = Math.abs(sum1p1-sum1p2) + Math.abs(sum2p1-sum2p2) + Math.abs(sum3p1-sum3p2) - Math.abs(sum4p1-sum4p2) + Math.abs(sum5p1-sum5p2);
-                     //score = Math.trunc((score/5) / 40 * 100);
-                    score = 50;
+                    score = Math.abs(sum1p1-sum1p2) + Math.abs(sum2p1-sum2p2) + Math.abs(sum3p1-sum3p2) - Math.abs(sum4p1-sum4p2) + Math.abs(sum5p1-sum5p2);
+                    score = Math.trunc((score/5) / 40 * 100);
+
 
                     
                     
                 document.getElementById('yesCount').textContent = score;
 
-    document.getElementById('yesCount1').textContent = sum1p1;
-    document.getElementById('yesCount2').textContent = sum1p2;
-    document.getElementById('yesCount3').textContent = sum2p1;
-    document.getElementById('yesCount4').textContent = sum2p2;
-    document.getElementById('yesCount5').textContent = sum3p1;
-    document.getElementById('yesCount6').textContent = sum3p2;
-    document.getElementById('yesCount7').textContent = sum4p1;
-    document.getElementById('yesCount8').textContent = sum4p2;
-    document.getElementById('yesCount9').textContent = sum5p1;
-    document.getElementById('yesCount0').textContent = sum5p2;
-                    
+
                 // window.location.href = "index.html";
                 }
                 }
