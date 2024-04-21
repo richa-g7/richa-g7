@@ -58,7 +58,7 @@ fetch('personality_questions.txt')
                     
                 }
                 else {
-                localStorage.setItem("personality_result", userResponses);
+                // localStorage.setItem("personality_result", userResponses);
 
                 
                 var p1 = userResponses.substring(0, 51);
