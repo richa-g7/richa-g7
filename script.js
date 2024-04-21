@@ -141,10 +141,11 @@ fetch('personality_questions.txt')
 
 
                 var button = document.getElementById("next-btn");
-
-
                 button.style.display = "none";
 
+
+                var button2 = document.getElementById("rtn-btn");
+                button.style.display = "block";
 
                 // window.location.href = "index.html";
                 }
