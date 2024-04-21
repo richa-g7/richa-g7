@@ -67,10 +67,10 @@ fetch('personality_questions.txt')
 
                 var sum1 = 0;
 
-                for (var i = 0; i < p1.length; i++) {
-                    if (!isNaN(parseInt(p1[i]))) {
+                for (var i = 0; i < p2.length; i++) {
+                    if (!isNaN(parseInt(p2[i]))) {
                     // If it's a digit, convert it to a number and add it to the sum
-                    sum1 += parseInt(p1[i]);
+                    sum1 += parseInt(p2[i]);
                 }
                 }
 
