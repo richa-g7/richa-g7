@@ -83,7 +83,7 @@
       score = document.getElementById("yesCount").innerHTML;
       if(sessionStorage.getItem("tests_taken") == null) {
                     sessionStorage.setItem("tests_taken", 1);
-                     var hey = parseInt(getElementById("yesCount").innerHTML);
+                     var hey = parseInt(document.getElementById("yesCount").innerHTML);
                      console.log( hey );
                     sessionStorage.setItem("score", score);
         } else {
