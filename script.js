@@ -11,6 +11,8 @@ fetch('personality_questions.txt')
         // Display the first question
         displayQuestion(currentIndex, questions);
         
+        function return() {}
+        
         // Function to display the current question
         function displayQuestion(index, questions) {
             const questionContainer = document.getElementById('question-container');
@@ -149,7 +151,7 @@ fetch('personality_questions.txt')
 
 
 
-        function return() {}
+        
             //var button2 = document.getElementbyId('rtn-btn");
             //button.style.visibility = "visible";
             //window.location.href = "index.html";
