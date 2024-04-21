@@ -62,7 +62,7 @@ fetch('personality_questions.txt')
 
                 
                 var p1 = userResponses.substring(0, 50);
-                var p2 = userResponses.substring(51);
+                var p2 = userResponses.substring(50);
 
                 var score = 0;
 
