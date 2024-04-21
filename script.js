@@ -137,6 +137,8 @@ fetch('personality_questions.txt')
 
                 var button = document.getElementById("next-btn");
                 button.style.display = "none";
+
+                document.getElementById("button2").style.display = 'block';
                     
                 document.getElementById('yesCount').textContent = score;
 
@@ -169,6 +171,11 @@ fetch('personality_questions.txt')
                 }
                 }
             
+        }
+
+          function retun() {
+                window.location.href = "index.html";
+                
         }
 
         document.getElementById('next-btn').addEventListener('click', nextQuestion);
