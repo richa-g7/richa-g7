@@ -42,8 +42,9 @@ fetch('personality_questions.txt')
             storeResponse(response);
 
             // Proceed to the next question or end the quiz
-            currentIndex++;
+            // currentIndex++;
             if (currentIndex < questions.length) {
+                currentIndex++;
                 displayQuestion(currentIndex, questions);
             } else {
                     
