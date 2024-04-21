@@ -181,6 +181,8 @@
 <!--   <button type="button" onclick="calculateYes()">Calculate Yeses</button> -->
          <button type="button" onclick="submitForm()">Submit</button>
 
+        <button type="button" id='button2' onclick="retun()" hidden>Return</button>
+
 <h2>Compatability Score: <span id="yesCount">0</span></h2>
 </form>
 
@@ -235,6 +237,8 @@
 sharedCount = Math.trunc(sharedCount/9 * 100);
                 
         document.getElementById('yesCount').textContent = sharedCount;
+        document.getElementbyId('button2').style.display = 'visible';
+                
         var score = sharedCount; 
 
         if(sessionStorage.getItem("tests_taken") == null) {
@@ -251,6 +255,11 @@ sharedCount = Math.trunc(sharedCount/9 * 100);
                 }
             // sessionStorage.setItem("Hot take answers", answers); // Save answers to localStorage
            
+        }
+
+        function return() {
+                windows.location.href = "index.html";
+                
         }
     </script>
 
