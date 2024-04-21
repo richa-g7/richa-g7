@@ -42,9 +42,8 @@ fetch('personality_questions.txt')
             storeResponse(response);
 
             // Proceed to the next question or end the quiz
-            // currentIndex++;
-            if (currentIndex < questions.length-1) {
-                currentIndex++;
+            currentIndex++;
+            if (currentIndex < questions.length) {
                 displayQuestion(currentIndex, questions);
                 
             } else {
@@ -52,9 +51,9 @@ fetch('personality_questions.txt')
                 // End of quiz, display the user's responses
                 // document.getElementById('response').innerText = 'User Responses: ' + userResponses;
                 if (personx == 1) {
-                    currentIndex = 0;
+                    currentIndex = -1;
                     personx = 2;
-                    alert("rf");
+                    alert("Preson2");
                 
                     
                 }
