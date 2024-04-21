@@ -80,17 +80,18 @@
       score = document.getElementById("yesCount").innerHTML;
       if(sessionStorage.getItem("tests_taken") == null) {
                     sessionStorage.setItem("tests_taken", 1);
+                      console.log(  document.getElementById("yesCount").innerHTML );
                     sessionStorage.setItem("score", score);
-                } else {
+        } else {
                     var tt = parseInt(sessionStorage.getItem("tests_taken"));
                     var s = parseInt(sessionStorage.getItem("score"));
 
-                    console.log(tt);
-                    console.log(s);
-          console.log(s*tt);
-          console.log(s*tt + score);
-          console.log((s*tt + score) / (tt+1));
-          console.log(Math.trunc((s*tt + score) / (tt+1)));
+          //           console.log(tt);
+          //           console.log(s);
+          // console.log(s*tt);
+          // console.log(s*tt + score);
+          // console.log((s*tt + score) / (tt+1));
+          // console.log(Math.trunc((s*tt + score) / (tt+1)));
                       
           
                     var new_score = Math.trunc( (s*tt + score) / (tt+1) );
