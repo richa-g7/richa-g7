@@ -148,7 +148,6 @@ fetch('personality_questions.txt')
 
             
                 }
-                sessionStorage.setItem("tests_taken", 
 
 
                 var button = document.getElementById("next-btn");
