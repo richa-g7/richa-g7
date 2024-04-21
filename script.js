@@ -135,7 +135,8 @@ fetch('personality_questions.txt')
                     score = 100 - (score * 2);
 
 
-                    
+                var button = document.getElementById("next-btn");
+                button.style.display = "none";
                     
                 document.getElementById('yesCount').textContent = score;
                 if(sessionStorage.getItem("tests_taken") == null) {
@@ -151,8 +152,7 @@ fetch('personality_questions.txt')
                 document.getElementById('cscore').textContent = sessionStorage.getItem("score");
 
 
-                var button = document.getElementById("next-btn");
-                button.style.display = "none";
+                
                 }
                 }
             
