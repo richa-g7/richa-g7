@@ -72,13 +72,6 @@
       const line = lines[p1];
       const lineArray = line.split(' ');
       document.getElementById("yesCount").innerHTML = lineArray[p2].slice(0, -1);
-                              // var hey = parseInt(lineArray[p2].slice(0, -1));
-        // console.log( hey );
-
-    })
-    .catch(error => {
-      console.error('Error reading file:', error);
-    });
 
       score = document.getElementById("yesCount").innerHTML;
       if(sessionStorage.getItem("tests_taken") == null) {
@@ -106,6 +99,40 @@
                     sessionStorage.setItem("tests_taken", tt );
                     sessionStorage.setItem("score", new_score );
                 }
+                              // var hey = parseInt(lineArray[p2].slice(0, -1));
+        // console.log( hey );
+
+    })
+    .catch(error => {
+      console.error('Error reading file:', error);
+    });
+
+      // score = document.getElementById("yesCount").innerHTML;
+      // if(sessionStorage.getItem("tests_taken") == null) {
+      //               sessionStorage.setItem("tests_taken", 1);
+      //                var hey = parseInt(document.getElementById("yesCount").innerHTML);
+      //                console.log( hey );
+      //                console.log(document.getElementById("yesCount").innerHTML);
+      //               sessionStorage.setItem("score", score);
+      //   } else {
+      //               var tt = parseInt(sessionStorage.getItem("tests_taken"));
+      //               var s = parseInt(sessionStorage.getItem("score"));
+
+      //     //           console.log(tt);
+      //     //           console.log(s);
+      //     // console.log(s*tt);
+      //     // console.log(s*tt + score);
+      //     // console.log((s*tt + score) / (tt+1));
+      //     // console.log(Math.trunc((s*tt + score) / (tt+1)));
+                      
+          
+      //               var new_score = Math.trunc( (s*tt + score) / (tt+1) );
+      //                 tt += 1;
+                    
+                   
+      //               sessionStorage.setItem("tests_taken", tt );
+      //               sessionStorage.setItem("score", new_score );
+      //           }
 }
 
 //   const astrotypes = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"];
