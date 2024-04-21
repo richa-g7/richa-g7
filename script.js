@@ -44,8 +44,8 @@ fetch('personality_questions.txt')
             // Proceed to the next question or end the quiz
             // currentIndex++;
             if (currentIndex < questions.length) {
-                currentIndex++;
                 displayQuestion(currentIndex, questions);
+                currentIndex++;
             } else {
                     
                 // End of quiz, display the user's responses
@@ -53,7 +53,7 @@ fetch('personality_questions.txt')
                 if (personx == 1) {
                     currentIndex = 0;
                     personx = 2;
-                    alert("gh");
+                    alert("rh");
                 
                     
                 }
