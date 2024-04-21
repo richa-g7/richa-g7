@@ -60,35 +60,53 @@
 
 <script>
   function submitForm() {
+
   const astrotypes = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"];
   let p1 = astrotypes.indexOf(document.getElementById("q1").value);
   let p2 = astrotypes.indexOf(document.getElementById("q2").value);
 
-  let filePath = "percent_zodiac.txt";
-  const fileStream = fs.createReadStream(filePath);
-  const rl = readline.createInterface({
-    input: fileStream,
-    crlfDelay: Infinity
-  });
-
-    let linecount = 0;
-
-  rl.on('line', (line) => {
-    if(linecount == p1){
-            const lineArray = line.split(' ');
-             document.getElementById("yesCount").innerHTML = lineArray[p2];
-    }
-    const lineArray = line.split(' ');
-    console.log("Array of words from line:", lineArray);
-    linecount++;
-    // You can process each lineArray here as needed
-  });
-
-  rl.on('close', () => {
-    console.log('File reading completed.');
-  });
+  fetch("https://example.com/percent_zodiac.txt")
+    .then(response => response.text())
+    .then(data => {
+      const lines = data.split('\n');
+      const line = lines[p1];
+      const lineArray = line.split(' ');
+      document.getElementById("yesCount").innerHTML = lineArray[p2];
+    })
+    .catch(error => {
+      console.error('Error reading file:', error);
+    });
 }
-  }
+
+//   const astrotypes = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"];
+//   let p1 = astrotypes.indexOf(document.getElementById("q1").value);
+//   let p2 = astrotypes.indexOf(document.getElementById("q2").value);
+
+//   let filePath = "percent_zodiac.txt";
+//   const fileStream = fs.createReadStream(filePath);
+//   const rl = readline.createInterface({
+//     input: fileStream,
+//     crlfDelay: Infinity
+//   });
+
+//     let linecount = 0;
+
+//   rl.on('line', (line) => {
+//     if(linecount == p1){
+//             const lineArray = line.split(' ');
+//              document.getElementById("yesCount").innerHTML = lineArray[p2];
+//     }
+//     const lineArray = line.split(' ');
+//     console.log("Array of words from line:", lineArray);
+//     linecount++;
+//     // You can process each lineArray here as needed
+//   });
+
+//   rl.on('close', () => {
+//     console.log('File reading completed.');
+//   });
+// }
+//   }
   
   
 </script>
