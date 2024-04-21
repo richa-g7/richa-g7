@@ -46,14 +46,6 @@ fetch('personality_questions.txt')
             if (currentIndex < questions.length) {
                 displayQuestion(currentIndex, questions);
             } else {
-                // if (personx == 1) {
-                    // personx = 2; 
-                    // currentIndex = 0;
-
-                // alert("Person 2, Please answer now.");
-                // return;
-           // }
-                } else {
                     
                 // End of quiz, display the user's responses
                 document.getElementById('response').innerText = 'User Responses: ' + userResponses;
