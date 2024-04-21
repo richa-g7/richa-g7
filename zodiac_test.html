@@ -64,7 +64,7 @@
   let p1 = astrotypes.indexOf(document.getElementById("q1").value);
   let p2 = astrotypes.indexOf(document.getElementById("q2").value);
 
-  let filePath = percent_zodiac.txt;
+  let filePath = "percent_zodiac.txt";
   const fileStream = fs.createReadStream(filePath);
   const rl = readline.createInterface({
     input: fileStream,
