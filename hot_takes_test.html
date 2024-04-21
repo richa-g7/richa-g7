@@ -181,7 +181,10 @@
 <!--   <button type="button" onclick="calculateYes()">Calculate Yeses</button> -->
          <button type="button" onclick="submitForm()">Submit</button>
 
-        <button type="button" id='button2' onclick="retun()" hidden>Return</button>
+        <button type="button" id='button2' onclick="retun()">Return</button>
+        <script>
+                document.getElementById(buttotn2).style.display = 'none';
+        </script>
 
 <h2>Compatability Score: <span id="yesCount">0</span></h2>
 </form>
@@ -237,7 +240,7 @@
 sharedCount = Math.trunc(sharedCount/9 * 100);
                 
         document.getElementById('yesCount').textContent = sharedCount;
-        document.getElementById('button2').style.visibility = 'visible';
+        document.getElementById(buttotn2).style.display = 'block';
                 
         var score = sharedCount; 
 
