@@ -113,11 +113,12 @@
                 alert("Please answer all questions before submitting.");
                 return;
            }
-      
-            localStorage.setItem("Hot take answers", answers); // Save answers to localStorage
-            window.location.href = "index.html";
+            
+            sessionStorage.setItem("Hot take answers", answers); // Save answers to localStorage
+           window.open("index.html", "_self");
         }
     </script>
 
+        
 </body>
 </html>
