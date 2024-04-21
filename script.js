@@ -64,21 +64,78 @@ fetch('personality_questions.txt')
                 var p1 = userResponses.substring(0, 50);
                 var p2 = userResponses.substring(51);
 
+                var score = 0;
 
-                var sum1 = 20;
+                var sum1p1 = 20;
+                var sum1p2 = 20;
 
-                for (var i = 0; i < p2.length; i++) {
-                    d = parseInt(p2[i]);
-                    if ( d%10 == 1) {
-                        sum1 += d;
+                var sum2p1 = 14;
+                var sum2p2 = 14;
                     
-                    } else if ( d%10 == 6) {
-                        sum1 -= d;
+                var sum3p1 = 14;
+                var sum3p2 = 14;
+                    
+                var sum4p1 = 38;
+                var sum4p2 = 38;
+                    
+                var sum5p1 = 8;
+                var sum5p2 = 8;
+                    
+                for (var i = 0; i < p2.length; i++) {
+                    dp1 = parseInt(p1[i]);
+                    dp2 = parseInt(p2[i]);
+
+                    mod = i%10;
+
+                    switch (mod) {
+                        case 0:
+                            sum5p1 -= dp1;
+                            sum5p2 -= dp2;
+                            break;
+                        case 1:
+                            sum1p1 += dp1;
+                            sum1p2 += dp2;
+                            break;
+                        case 2:
+                            sum2p1 -= dp1;
+                            sum2p2 -= dp2;
+                            break;
+                        case 3:
+                            sum3p1 += dp1;
+                            sum3p2 += dp2;
+                            break;
+                        case 4:
+                            sum4p1 -= dp1;
+                            sum4p2 -= dp2;
+                            break;
+                        case 5:
+                            sum5p1 += dp1;
+                            sum5p2 += dp2;
+                            break;
+                        case 6:
+                            sum1p1 -= dp1;
+                            sum1p2 -= dp2;
+                            break;
+                        case 7:
+                            sum2p1 += dp1;
+                            sum2p2 += dp2;
+                            break;
+                        case 8:
+                            sum3p1 -= dp1;
+                            sum3p2 -= dp2;
+                            break;
+                        case 9:
+                            sum4p1 += dp1;
+                            sum4p2 += dp2;
+                            break;
                     }
                 }
 
+                    score = Math.abs(sum1p1-sum1p2) + Math.abs(sum2p1-sum2p2) + Math.abs(sum3p1-sum3p2) - Math.abs(sum4p1-sum4p2) + Math.abs(sum5p1-sum5p2)
+                    score = Math.trunc((score/5) / 40 * 100);
                     
-                document.getElementById('yesCount').textContent = sum1;
+                    
+                document.getElementById('yesCount').textContent = score;
                     
                 // window.location.href = "index.html";
                 }
