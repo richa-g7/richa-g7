@@ -61,8 +61,8 @@ fetch('personality_questions.txt')
                 localStorage.setItem("personality_result", userResponses);
 
                 
-                var p1 = userResponses.substring(0, 50);
-                var p2 = userResponses.substring(50);
+                var p1 = userResponses.substring(0, 3);
+                var p2 = userResponses.substring(3);
 
 
                 var sum1 = 0;
