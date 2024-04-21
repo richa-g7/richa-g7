@@ -235,12 +235,13 @@
 sharedCount = Math.trunc(sharedCount/9 * 100);
                 
         document.getElementById('yesCount').textContent = sharedCount;
+        var score = sharedCount; 
 
         if(sessionStorage.getItem("tests_taken") == null) {
                     sessionStorage.setItem("tests_taken", 1);
                     sessionStorage.setItem("score", score);
         } else {
-                var score = sharedCount;    
+                   
                 var tt = parseInt(sessionStorage.getItem("tests_taken"));
                     var s = parseInt(sessionStorage.getItem("score"));                      
                     var new_score = Math.trunc( (s*tt + score) / (tt+1) );
