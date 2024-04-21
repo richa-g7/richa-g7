@@ -71,9 +71,9 @@
       const lines = data.split('\n');
       const line = lines[p1];
       const lineArray = line.split(' ');
-      document.getElementById("yesCount").innerHTML = lineArray[p2];
-                              var hey = parseInt(lineArray[p2].slice(0, -1));
-        console.log( hey );
+      document.getElementById("yesCount").innerHTML = lineArray[p2].slice(0, -1);
+                              // var hey = parseInt(lineArray[p2].slice(0, -1));
+        // console.log( hey );
 
     })
     .catch(error => {
@@ -83,8 +83,8 @@
       score = document.getElementById("yesCount").innerHTML;
       if(sessionStorage.getItem("tests_taken") == null) {
                     sessionStorage.setItem("tests_taken", 1);
-                    //  var hey = parseInt(lineArray[p2].slice(0, -1));
-                     // console.log( hey );
+                     var hey = parseInt(getElementById("yesCount").innerHTML);
+                     console.log( hey );
                     sessionStorage.setItem("score", score);
         } else {
                     var tt = parseInt(sessionStorage.getItem("tests_taken"));
