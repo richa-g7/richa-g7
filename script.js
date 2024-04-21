@@ -145,7 +145,7 @@ fetch('personality_questions.txt')
                 } else {
                     var new_score = sessionStorage.getItem("score")*sessionStorage.getItem("tests_taken") + score;
                     sessionStorage.setItem("tests_taken", sessionStorage.getItem("tests_taken") + 1 );
-                    sessionStorage.setItem("score", Math.trun(new_score / sessionStorage.getItem("tests_taken")) );
+                    sessionStorage.setItem("score", Math.trunc(new_score / sessionStorage.getItem("tests_taken")) );
 
             
                 }
