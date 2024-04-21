@@ -131,7 +131,7 @@ fetch('personality_questions.txt')
                     }
                 }
 
-                    score = Math.abs(sum1p1-sum1p2) + Math.abs(sum2p1-sum2p2) + Math.abs(sum3p1-sum3p2) - Math.abs(sum4p1-sum4p2) + Math.abs(sum5p1-sum5p2);
+                    score = Math.abs(sum1p1-sum1p2) + Math.abs(sum2p1-sum2p2) + Math.abs(sum3p1-sum3p2) + Math.abs(sum4p1-sum4p2) + Math.abs(sum5p1-sum5p2);
                     score = 100 - (score * 2);
 
 
