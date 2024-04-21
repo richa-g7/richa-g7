@@ -115,7 +115,15 @@
            }
             
             sessionStorage.setItem("Hot take answers", answers); // Save answers to localStorage
-            // window.location.href = "index.html";
+            displayAnswers(answers); // Display answers
+}
+
+function displayAnswers(answers) {
+    let answersDiv = document.getElementById("answers");
+    answersDiv.textContent = "Answers: " + answers;
+                
+                
+                // window.location.href = "index.html";
         }
     </script>
 
