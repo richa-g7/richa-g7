@@ -5,7 +5,7 @@ fetch('personality_questions.txt')
         // Split the data into an array of lines
         const questions = data.trim().split('\n');
         let currentIndex = 0;
-        // let personx = 1;
+        let personx = 1;
         let userResponses = '';
 
         // Display the first question
@@ -49,8 +49,17 @@ fetch('personality_questions.txt')
                     
                 // End of quiz, display the user's responses
                 // document.getElementById('response').innerText = 'User Responses: ' + userResponses;
+                if (personx == 1) {
+                    currentIndex = 0;
+                    personx = 2;
+                    alert("gh");
+                
+                    
+                }
+                else {
                 localStorage.setItem("personality_result", userResponses);
                 window.location.href = "index.html";
+                }
                 }
             
         }
