@@ -77,12 +77,13 @@
       if(sessionStorage.getItem("tests_taken") == null) {
                     sessionStorage.setItem("tests_taken", 1);
                      var hey = parseInt(document.getElementById("yesCount").innerHTML);
-                     console.log( hey );
-                     console.log(document.getElementById("yesCount").innerHTML);
+                     // console.log( hey );
+                     // console.log(document.getElementById("yesCount").innerHTML);
                     sessionStorage.setItem("score", score);
         } else {
                     var tt = parseInt(sessionStorage.getItem("tests_taken"));
                     var s = parseInt(sessionStorage.getItem("score"));
+                  var score = parseInt(document.getElementById("yesCount").innerHTML);
 
                      console.log(tt);
                      console.log(s);
