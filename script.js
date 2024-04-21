@@ -144,18 +144,13 @@ fetch('personality_questions.txt')
                 button.style.display = "none";
 
 
-                var button2 = document.getElementById("rtn-btn");
-                button.style.visibility = "visible";
+                // var button2 = document.getElementById("rtn-btn");
+                // button.style.visibility = "visible";
 
                 // window.location.href = "index.html";
                 }
                 }
             
-    
-
-        function return() {
-            window.location.href = "index.html"
-        }
         }
         document.getElementById('next-btn').addEventListener('click', nextQuestion);
     });
