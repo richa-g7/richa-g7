@@ -151,11 +151,11 @@ fetch('personality_questions.txt')
                 }
                 }
             
-        }
+    
 
         function return() {
             window.location.href = "index.html"
-
+        }
         }
         document.getElementById('next-btn').addEventListener('click', nextQuestion);
     });
