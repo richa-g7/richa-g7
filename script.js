@@ -139,17 +139,10 @@ fetch('personality_questions.txt')
                     
                 document.getElementById('yesCount').textContent = score;
 
-                    
-                    document.getElementById('yesCount1').textContent = sum1p1;
-                    document.getElementById('yesCount2').textContent = sum1p2;
-                    document.getElementById('yesCount3').textContent = sum2p1;
-                    document.getElementById('yesCount4').textContent = sum2p2;
-                    document.getElementById('yesCount5').textContent = sum3p1;
-                    document.getElementById('yesCount6').textContent = sum3p2;
-                    document.getElementById('yesCount7').textContent = sum4p1;
-                    document.getElementById('yesCount8').textContent = sum4p2;
-                    document.getElementById('yesCount9').textContent = sum5p1;
-                    document.getElementById('yesCount0').textContent = sum5p2;
+                var button = document.getElementById("next-btn");
+
+
+                button.style.display = "none";
 
 
                 // window.location.href = "index.html";
