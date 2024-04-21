@@ -49,6 +49,10 @@ fetch('personality_questions.txt')
                 if (personx == 1) {
                     personx = 2; 
                     currentIndex = 0;
+
+                alert("Person 2, Please answer now.");
+                return;
+           }
                 } else {
                     
                 // End of quiz, display the user's responses
