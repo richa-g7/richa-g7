@@ -145,7 +145,7 @@ fetch('personality_questions.txt')
 
 
                 var button2 = document.getElementById("rtn-btn");
-                button.style.display = "block";
+                button.style.visibility = "visible";
 
                 // window.location.href = "index.html";
                 }
