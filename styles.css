@@ -31,26 +31,54 @@ a {
     text-decoration: none; /* Remove underline from links */
 }
 
-.button {
+/* Button for links */
+.button-link {
     display: inline-block;
     background-color: #F39EC7;
     color: #E2E7EB;
     padding: 10px 20px;
     margin-top: 10px;
-    border: none;
+    border: 1px solid #F39EC7;
     border-radius: 5px;
     cursor: pointer;
-    font-family: 'Indie Flower', cursive; /* Use Indie Flower font for buttons */
-     text-decoration: none;
-     transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Add transition effect */
-    -webkit-appearance: none; /* Remove default styling for webkit browsers */
-    -moz-appearance: none; /* Remove default styling for firefox */
-    appearance: none; /* Remove default styling for other browsers */
+    font-family: 'Indie Flower', cursive;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
-.button:hover {
+.button-link:hover {
     background-color: #028A88;
     color: #E2E7EB;
+    border-color: #028A88;
+}
+
+.button-link:active {
+    transform: translateY(1px);
+}
+
+/* Button for form submit */
+.button-submit {
+    display: inline-block;
+    background-color: #028A88;
+    color: #E2E7EB;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: 1px solid #028A88;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Indie Flower', cursive;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.button-submit:hover {
+    background-color: #F39EC7;
+    color: #E2E7EB;
+    border-color: #F39EC7;
+}
+
+.button-submit:active {
+    transform: translateY(1px);
 }
 
 alert {
