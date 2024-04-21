@@ -149,7 +149,7 @@ fetch('personality_questions.txt')
 
             
                 }
-                document.getElementById('cscore').textContent = sessionStorage.getItem("score");
+    
 
 
                 
