@@ -53,7 +53,7 @@ fetch('personality_questions.txt')
                 if (personx == 1) {
                     currentIndex = -1;
                     personx = 2;
-                    alert("Preson2");
+                    alert("Swap time! Person 2, please begin answering.");
                 
                     
                 }
