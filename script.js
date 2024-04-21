@@ -139,16 +139,29 @@ fetch('personality_questions.txt')
                 button.style.display = "none";
                     
                 document.getElementById('yesCount').textContent = score;
-                if(sessionStorage.getItem("tests_taken") == null) {
+
+        if(sessionStorage.getItem("tests_taken") == null) {
                     sessionStorage.setItem("tests_taken", 1);
                     sessionStorage.setItem("score", score);
-                } else {
-                    var new_score = sessionStorage.getItem("score")*sessionStorage.getItem("tests_taken") + score;
-                    sessionStorage.setItem("tests_taken", sessionStorage.getItem("tests_taken") + 1 );
-                    sessionStorage.setItem("score", Math.trunc(new_score / sessionStorage.getItem("tests_taken")) );
+        } else {
+                    var tt = parseInt(sessionStorage.getItem("tests_taken"));
+                    var s = parseInt(sessionStorage.getItem("score"));                      
+                    var new_score = Math.trunc( (s*tt + score) / (tt+1) );
+                      tt += 1;           
+                    sessionStorage.setItem("tests_taken", tt );
+                    sessionStorage.setItem("score", new_score );
+                }
+                    
+                // if(sessionStorage.getItem("tests_taken") == null) {
+                //     sessionStorage.setItem("tests_taken", 1);
+                //     sessionStorage.setItem("score", score);
+                // } else {
+                //     var new_score = sessionStorage.getItem("score")*sessionStorage.getItem("tests_taken") + score;
+                //     sessionStorage.setItem("tests_taken", sessionStorage.getItem("tests_taken") + 1 );
+                //     sessionStorage.setItem("score", Math.trunc(new_score / sessionStorage.getItem("tests_taken")) );
 
             
-                }
+                // }
     
 
 
